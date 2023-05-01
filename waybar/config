@@ -1,0 +1,82 @@
+{
+    "position": "bottom", 
+    "height": 30,
+    "modules-center": ["wlr/workspaces", "network", "pulseaudio", "battery", "custom/date", "clock", "tray"],
+    // Modules configuration
+	"wlr/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+	 	"persistent_workspaces": {
+	 		"1": [],
+	 		"2": [],
+	 		"3": [],
+	 		"4": [],
+	 		"5": [],
+	 		"6": [],
+	 		"7": [],
+	 		"8": [],
+	 		"9": [],
+	 		"10": []
+	},
+         	"format-icons": {
+             		"1": "ほ",
+             		"2": "ゑ",
+             		"3": "実",
+             		"4": "意",
+             		"5": "京",
+             		"6": "六",
+             		"7": "七",
+             		"8": "八",
+             		"9": "九",
+             		"10": "〇"
+         }
+     },
+     "tray": {
+        "icon-size": 21,
+
+        "spacing": 10
+    },
+	"custom/date": {
+    		"format": "󰸗 {}",
+		"interval": 3600,
+		"exec": "/home/loki/bin/waybar-date.sh"
+	},
+	"clock": {
+		"format": "🍺 {:%H:%M} ",
+        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	},
+	"battery": {
+        	"states": {
+            		"warning": 30,
+            		"critical": 15,
+        	},
+        	"format": "{icon} {capacity}%",
+        	"format-charging": "󰂄 {capacity}%",
+        	"format-plugged": "󰂄{capacity}%",
+        	"format-alt": "{icon} {time}",
+        	"format-full": "🔋 {capacity}%",
+        	"format-icons": ["󱊡", "󱊢", "󱊣"]
+	},
+	"network": {
+        	"format-wifi": "👑  {essid}",
+        	"format-ethernet": "󰤮 Disconnected",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "󰤮 Disconnected",
+		"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+	},
+	"pulseaudio": {
+		"on-click": "pactl set-sink-mute 45 toggle",
+		"format": "{icon}  {volume}%",
+        	"format-muted": "󰖁 Muted",
+        	"format-icons": {
+            	"headphone": "",
+            	"hands-free": "",
+            	"headset": " 🎧",
+            	"phone": "",
+            	"portable": "",
+            	"car": "",
+            	"default": ["", "", ""]
+        },
+    }
+}
