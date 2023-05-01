@@ -2,6 +2,7 @@
 
 ##### Live Wallpaper
 <img src="assets/phantom_theme.gif" alt="Main screen theme 4" align="center">
+Complete overview: https://youtu.be/0iL1zzCPXKM
 
 ## Advantages and Disadvantages ✏️
 🟢 Higher productivity<br>
